@@ -19,12 +19,13 @@ export default function Slider({ img }: SliderProps) {
         if (index === activeIndex) { // Only apply zoom if image is active
             const { offsetX, offsetY, target } = e.nativeEvent;
             const { clientWidth, clientHeight } = target as HTMLImageElement;
-
+    
             const xPercent = (offsetX / clientWidth) * 100;
             const yPercent = (offsetY / clientHeight) * 100;
-
+    
             (target as HTMLImageElement).style.transform = `scale(1.4)`;
             (target as HTMLImageElement).style.transformOrigin = `${xPercent}% ${yPercent}%`;
+            (target as HTMLImageElement).style.transition = `transform 0.3s ease`; // Add transition
         }
     };
 
