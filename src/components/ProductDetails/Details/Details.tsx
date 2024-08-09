@@ -27,7 +27,7 @@ const Details = ({ data }: IProps) => {
   if (!data) {
     return <div>No data available</div>;
   }
- console.log(data);
+
  
   return (
     <Fragment>

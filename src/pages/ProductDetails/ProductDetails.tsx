@@ -34,6 +34,7 @@ const ProductDetailsContainer = () => {
 
   return (
     <Fragment>
+     {data&&<>
       <Helmet>
                 <meta charSet="utf-8" />
                 <title>{data.name}</title>
@@ -50,6 +51,7 @@ const ProductDetailsContainer = () => {
       </div>
       <Card/>
        <Desc desc={data.additional_features}/>
+     </>}
     </Fragment>
   );
 }
