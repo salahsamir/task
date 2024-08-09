@@ -55,7 +55,7 @@ const ProductDetailsContainer = () => {
   </ol>
 </nav>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 space-x-8 gap-4 my-8 p-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 space-x-4 gap-4 my-4 ">
         <div className="order-2 md:order-1">
           <Slider img={img} />
         </div>
