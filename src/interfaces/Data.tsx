@@ -3,6 +3,7 @@
 export interface IData{
   
         data: {
+          id: number;
           name: string;
           processor: { name: string };
           resolution: { resolution: string; size: string };

@@ -9,8 +9,8 @@ const Stock=({stock}:IProps)=> {
     <Fragment>
         <div className="my-4">
         <div className='flex items-center space-x-8 my-4 '>
-            <span className='text-lg font-bold border-1 border border-green-400  text-green-500 p-1 rounded-md'>{stock.price} EGP</span>
-            <p className='text-sm text-gray-500 font-semibold  flex items-center  gap-2'> <Sparkles width={20} />In Stock</p>
+            <span className='text-base font-bold border-1 border border-green-400  text-green-500 p-1 rounded-md'>{stock.price} EGP</span>
+            <p className='text-base text-gray-500 font-semibold  flex items-center  gap-2'> <Sparkles width={20} />In Stock</p>
         </div>
         <div className=' flex justify-around space-x-8 my-4 text-center '>
         <div className="flex space-x-2 justify-around  items-center text-lg  w-1/4 py-1   bg-slate-100 rounded-md">

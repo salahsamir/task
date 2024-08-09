@@ -6,9 +6,9 @@ interface IDetailItemProps {
 }
 
 const DetailItem = ({ label, value }: IDetailItemProps) => (
-  <div className='grid grid-cols-2  gap-4 my-4'>
-    <h3 className="text-md font-semibold text-slate-600">{label}:</h3>
-    <h3 className="text-md text-slate-600 ">{value}</h3>
+  <div className='grid grid-cols-2  gap-4 my-2'>
+    <h3 className="text-base font-semibold text-slate-600">{label}:</h3>
+    <h3 className="text-base text-slate-600 ">{value}</h3>
   </div>
 );
 
