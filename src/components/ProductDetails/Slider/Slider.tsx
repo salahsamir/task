@@ -65,14 +65,19 @@ export default function Slider({ img }: SliderProps) {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper"
             >
-                {img.map((image, index) => (
-                    <SwiperSlide key={index}>
-                        <img
-                            src={`https://sellxa.com/backend/${image.url}`}
-                            alt={image.token}
-                            className="block w-full"
-                        />
-                    </SwiperSlide>
+                {img.map((image, index) => (<SwiperSlide key={index}>
+    <img
+        src={`https://sellxa.com/backend/${image.url}`}
+        alt={image.token}
+        onMouseMove={(e) => handleMouseMove(e, index)}
+        onMouseLeave={handleMouseLeave}
+        onError={(e) => {
+            console.error(`Image failed to load: ${image.url}`);
+            (e.target as HTMLImageElement).src = '/path/to/placeholder/image.png'; // Use a placeholder image if loading fails
+        }}
+        className="block w-full"
+    />
+</SwiperSlide>
                 ))}
             </Swiper>
         </Fragment>

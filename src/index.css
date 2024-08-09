@@ -75,7 +75,8 @@ body {
 }
 
 .mySwiper .swiper-slide-thumb-active {
-   border:solid 3px black;
+   border:solid 2px black;
+   padding: 5px;
 }
 
 .swiper-slide img {
