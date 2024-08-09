@@ -23,7 +23,7 @@ export default function Slider({ img }: SliderProps) {
             const xPercent = (offsetX / clientWidth) * 100;
             const yPercent = (offsetY / clientHeight) * 100;
 
-            (target as HTMLImageElement).style.transform = `scale(1.5)`;
+            (target as HTMLImageElement).style.transform = `scale(1.4)`;
             (target as HTMLImageElement).style.transformOrigin = `${xPercent}% ${yPercent}%`;
         }
     };
@@ -50,7 +50,7 @@ export default function Slider({ img }: SliderProps) {
                             alt={image.token}
                             onMouseMove={(e) => handleMouseMove(e, index)}
                             onMouseLeave={handleMouseLeave}
-                            className="block w-full"
+                            className="block w-full" // Changed from w-80 to w-60
                         />
                     </SwiperSlide>
                 ))}
@@ -65,19 +65,14 @@ export default function Slider({ img }: SliderProps) {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper"
             >
-                {img.map((image, index) => (<SwiperSlide key={index}>
-    <img
-        src={`https://sellxa.com/backend/${image.url}`}
-        alt={image.token}
-        onMouseMove={(e) => handleMouseMove(e, index)}
-        onMouseLeave={handleMouseLeave}
-        onError={(e) => {
-            console.error(`Image failed to load: ${image.url}`);
-            (e.target as HTMLImageElement).src = '/path/to/placeholder/image.png'; // Use a placeholder image if loading fails
-        }}
-        className="block w-full"
-    />
-</SwiperSlide>
+                {img.map((image, index) => (
+                    <SwiperSlide key={index}>
+                        <img
+                            src={`https://sellxa.com/backend/${image.url}`}
+                            alt={image.token}
+                            className="block w-full"
+                        />
+                    </SwiperSlide>
                 ))}
             </Swiper>
         </Fragment>

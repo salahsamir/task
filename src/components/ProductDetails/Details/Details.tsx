@@ -7,7 +7,7 @@ interface IDetailItemProps {
 
 const DetailItem = ({ label, value }: IDetailItemProps) => (
   <div className='grid grid-cols-2  gap-4 my-2'>
-    <h3 className="text-base font-semibold text-slate-600">{label}:</h3>
+    <h3 className="text-base font-semibold text-slate-700">{label}:</h3>
     <h3 className="text-base text-slate-600 ">{value}</h3>
   </div>
 );
@@ -31,7 +31,7 @@ const Details = ({ data }: IProps) => {
  
   return (
     <Fragment>
-      <h2 className="text-2xl">Product Details</h2>
+      <h2 className="text-2xl mt-4 pt-4">Product Details</h2>
       <div className='m-4'>
         <DetailItem
           label="Processor"

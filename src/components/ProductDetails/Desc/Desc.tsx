@@ -11,7 +11,7 @@ export default function Desc({ desc }: { desc: string }) {
         <div>
           <MenuButton
             onClick={() => setIsOpen(!isOpen)}
-            className="inline-flex w-full justify-between items-center gap-x-1.5 rounded-md bg-slate-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300"
+            className="inline-flex w-full justify-between items-center gap-x-1.5 rounded-md bg-slate-100 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300"
           >
             Description
             <span>{isOpen ? <Minus width={20} /> : <Plus width={20} />}</span>

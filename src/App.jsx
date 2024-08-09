@@ -4,9 +4,9 @@ import Nav from './components/Nav/Nav'
 
 export default function App() {
   return (
-   <main>
+   <main className='pb-20'>
      <Nav/>
-      <section className='container py-20 '>
+      <section className='container '>
         <ProductDetails/>
       </section>
    </main>

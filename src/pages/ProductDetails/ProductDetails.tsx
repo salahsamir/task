@@ -40,7 +40,7 @@ const ProductDetailsContainer = () => {
         
             </Helmet>
        <ProductNav name={data.name?.slice(0,20)}/>
-      <div className="grid grid-cols-1 md:grid-cols-2 space-x-4 gap-4 my-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 space-x-4 gap-4 ">
         <div className="order-2 md:order-1">
           <Slider img={img} />
         </div>
