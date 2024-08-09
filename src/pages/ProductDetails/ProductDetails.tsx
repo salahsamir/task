@@ -8,6 +8,7 @@ import Card from '../../components/ProductDetails/Card/Cards';
 import { Slash } from 'lucide-react';
 import Desc from '../../components/ProductDetails/Desc/Desc';
 import ProductNav from '../../components/ProductDetails/ProductNav/Nav';
+import { Helmet } from 'react-helmet';
 
 const ProductDetailsContainer = () => {
   const [data, setData] = useState<IData>({ data: {} as IData['data'] });
@@ -33,6 +34,11 @@ const ProductDetailsContainer = () => {
 
   return (
     <Fragment>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>{data.name}</title>
+        
+            </Helmet>
        <ProductNav name={data.name?.slice(0,20)}/>
       <div className="grid grid-cols-1 md:grid-cols-2 space-x-4 gap-4 my-4 ">
         <div className="order-2 md:order-1">
