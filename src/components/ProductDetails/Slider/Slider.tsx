@@ -5,33 +5,29 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import { IImg } from '../../../interfaces/Img';
 
-interface SliderProps {
-    img: IImg[];
-}
+export default function Slider({ img }) {
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0)
 
-export default function Slider({ img }: SliderProps) {
-    const [thumbsSwiper, setThumbsSwiper] = useState<Swiper | null>(null);
-    const [activeIndex, setActiveIndex] = useState<number>(0); // Track active slide index
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLImageElement, MouseEvent>, index: number) => {
+    const handleMouseMove = (e, index) => {
         if (index === activeIndex) { // Only apply zoom if image is active
             const { offsetX, offsetY, target } = e.nativeEvent;
-            const { clientWidth, clientHeight } = target as HTMLImageElement;
+            const { clientWidth, clientHeight } = target;
     
             const xPercent = (offsetX / clientWidth) * 100;
             const yPercent = (offsetY / clientHeight) * 100;
     
-            (target as HTMLImageElement).style.transform = `scale(1.4)`;
-            (target as HTMLImageElement).style.transformOrigin = `${xPercent}% ${yPercent}%`;
-            (target as HTMLImageElement).style.transition = `transform 0.3s ease`; // Add transition
+            target.style.transform = `scale(1.4)`;
+            target.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+            target.style.transition = `transform 0.3s ease`; // Add transition
         }
     };
 
-    const handleMouseLeave = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
-        (e.target as HTMLImageElement).style.transform = `scale(1)`;
-        (e.target as HTMLImageElement).style.transformOrigin = `center center`;
+    const handleMouseLeave = (e) => {
+        e.target.style.transform = `scale(1)`;
+        e.target.style.transformOrigin = `center center`;
     };
 
     return (

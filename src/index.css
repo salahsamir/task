@@ -5,8 +5,7 @@
 #app {
   height: 100%;
 }
-html,
-body {
+html, body {
   position: relative;
   height: 100%;
 }
@@ -22,18 +21,20 @@ body {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .swiper-slide img {
@@ -41,19 +42,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-
-.swiper {
-  width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
+  transition: transform 0.3s ease;
 }
 
 .mySwiper2 {
@@ -71,43 +60,22 @@ body {
   width: 50%;
   height: 100%;
   padding: 1px;
- 
 }
 
 .mySwiper .swiper-slide-thumb-active {
-   border:solid 2px black;
-   padding: 1px;
+  border: solid 2px black;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: rgb(28, 28, 28); /* Black background */
+.swiper-button-next, .swiper-button-prev {
+  background-color: rgb(28, 28, 28);
   color: white;
   border-radius: 50%;
   border: none;
-  padding: 10px; 
-  width: 40px; /* Adjust button size */
-  height: 40px; /* Adjust button size */
+  padding: 10px;
+  width: 40px;
+  height: 40px;
 }
 
-/* Button icon size */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 20px; /* Adjust icon size as needed */
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 20px;
 }
-.mySwiper2 img {
-  transition: transform 0.3s ease;
-}
-/* Optional: Add a border around the buttons
-.swiper-button-next,
-.swiper-button-prev {
-  border: 1px solid white; /* Optional: White border for better visibility */
-
