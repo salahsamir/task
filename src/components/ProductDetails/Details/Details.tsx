@@ -4,14 +4,12 @@ interface IDetailItemProps {
   label: string;
   value: string;
 }
-
 const DetailItem = ({ label, value }: IDetailItemProps) => (
   <div className='grid grid-cols-2  gap-4 my-2'>
     <h3 className="text-base font-semibold text-slate-700">{label}:</h3>
     <h3 className="text-base text-slate-600 ">{value}</h3>
   </div>
 );
-
 interface IProps {
   data: {
     processor: { name: string };
@@ -22,13 +20,10 @@ interface IProps {
     battery_capacity: { manufacturer: string; capacity: string; type: string };
   };
 }
-
 const Details = ({ data }: IProps) => {
   if (!data) {
     return <div>No data available</div>;
   }
-
- 
   return (
     <Fragment>
       <h2 className="text-2xl mt-4 pt-4">Product Details</h2>

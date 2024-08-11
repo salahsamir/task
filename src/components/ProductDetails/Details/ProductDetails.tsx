@@ -8,10 +8,7 @@ interface IProps {
     stock: IStock[];
     data: IData;
 }
-
-
 const ProductDetailsContent = ({ stock, data }: IProps) => {
-    console.log(data);
     
   return (
     <main>

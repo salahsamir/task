@@ -8,6 +8,7 @@ export default function App() {
      <Nav/>
       <section className='container '>
         <ProductDetails/>
+        
       </section>
    </main>
   )
